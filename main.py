@@ -9,9 +9,9 @@ pdOutput = []
 pdErrorList = []
 
 
-for i in range(2011, 2022):
+for i in range(2011, 2023):
     for j in range(1, 13):
-        date = str(i) + str(j)
+        date = str(i) + '%02d'%j
         http = 'http://www.tianqihoubao.com/lishi/wuxi/month/%s.html' % date
         try:
             pdList = pandas.read_html(
